@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Chakra Petch', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: var(--font-sans);
+    background-color: #090b10;
+    color: #f1f5f9;
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-nums {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.touch-none-game {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Custom sleek range slider for tuning panel */
+input[type='range'].tuning-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  outline: none;
+}
+
+input[type='range'].tuning-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f59e0b;
+  border: 2px solid #090b10;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+input[type='range'].tuning-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+input[type='range'].tuning-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f59e0b;
+  border: 2px solid #090b10;
+  cursor: pointer;
+}
+

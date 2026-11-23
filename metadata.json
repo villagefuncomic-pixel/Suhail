@@ -1,0 +1,8 @@
+{
+  "name": " Wow Suhail",
+  "description": "Experience hyper-realistic racing with customizable supercars, intense multiplayer competition, and global leaderboards on mobile.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
